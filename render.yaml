@@ -1,0 +1,9 @@
+# Deploy from a repository containing this file and the website files at its root.
+# Public deployment requires review of the policy pages before use.
+services:
+  - type: web
+    name: asset-notitia-docs
+    runtime: static
+    buildCommand: test -f privacy.html
+    staticPublishPath: .
+    autoDeployTrigger: off
